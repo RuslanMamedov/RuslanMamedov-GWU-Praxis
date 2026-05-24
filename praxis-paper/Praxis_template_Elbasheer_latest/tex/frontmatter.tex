@@ -1,0 +1,204 @@
+% !TEX root = ../thesis-sample.tex
+
+% --------- FRONT MATTER PAGES ---------------------
+
+% Title of the thesis
+\title{Your Praxis Tile. First letter of every word is capitalized}
+% capitalize significant words!
+
+% Author name
+\author{Your Name}
+
+% Previous degrees
+\bachelordegree{Bachelor of Science}
+\bsdepartment{Your Major}
+\bsschool{your University }
+\bsgrad{month year} % "month year"
+
+\masterdegree{M.S.}
+\msdepartment{Your Major}
+\msschool{your University }
+\msgrad{August 2014}  % "month year"
+% you can show or hide the MS degree line
+\showmsdegree
+% \hidemsdegree
+
+% PhD degree commands
+% Committee
+\showcommitteepage % hide this page if you're doing a MS thesis
+%\hidecommitteepage 
+
+
+% define COMMITTEE information
+
+% in general, note that administrative titles are not used, instead use "professorial titles"?
+
+% Chair must be entered separately for formatting reasons.
+\chair{[Your Advisor Name]}
+%\department{Professorial Lecturer in Engineering and Applied Science}
+\chairtitle{Professorial Lecturer in  Engineering and Applied Science}
+
+% uncomment and use the below if you have a co-chair. note the code reacts to the \cochair{} , not the \cochairtitle{}
+% \cochair{Co-Chair Person}
+% \cochairtitle{Just-as-Amazing Professor of \insertdepartment}
+
+\phdschool{The School of Engineering and Applied Science}
+
+\committee{ 
+% director first
+\insertchair, \insertchairtitle, Praxis Director
+
+% remember to add a space between committee members
+%\vspace{\baselineskip}
+
+\IfNoText{\insertcochair}
+    { % if you have no co-chair, leave \cochair{} undefined/blank and fill in the next line
+    % Full Name, Title, Praxis Director/Praxis Co-Director/Committee Member \hfill
+    % Shahryar Sarkani, Professorial Lecturer of Engineering and Applied Science, Committee Member \hfill
+
+    }{ % if you have defind these, it will fill in the below:
+        \insertcochair, 
+        \IfNoText{\insertcochairtitle}{\textbf{DEFINE CO-CHAIR TITLE}}{\insertcochairtitle}, 
+        Praxis Co-Director \hfill
+    }
+
+%\vspace{\baselineskip}
+
+% note you shouldn't write "The George Washington University" at all- it is implied
+% Full Name, Title, Praxis Director/Praxis Co-Director/Committee Member \hfill
+% Shahryar Sarkani, Professorial Lecturer of Engineering and Applied Science /Committee Member \hfill
+
+\vspace{\baselineskip}
+
+XYZ, Professor of Online Engineering Programs, Chair \hfill
+
+\vspace{\baselineskip}
+
+XYZ, Professorial Lecturer of Engineering and Applied Science, Committee Member \hfill
+
+
+% external examiner
+% Name of External Examiner, Professorial Title, Name of External University (or Name, Job Title, Name of External Company), Committee Member  % include university or company of any external examiner! but still "committee member"
+}
+
+\phdgrad{Month DD, 2025}  % Month DD, YYYY
+\defensedate{Month DD, 2025}  % Month DD, YYYY
+% Year of completion for copyright page and perhaps other places
+\year=2025
+
+% Copyright page
+%\copyrightholder{Someone else}
+
+% Dedication
+\dedication{ %
+\emph{
+\lipsum[1]
+}
+}
+
+% Acknowledgments
+\acknowledgments{
+\lipsum[1]
+
+}
+
+
+
+% commands to show or hide front matter pages
+% ############################THIS I CHANGE TO SHOW AND HIDE#########
+\showcopyright
+\showabstract
+\showcommitteepage
+\showdedication
+\showacknowledgments
+\hidepreface
+\hideprologue
+\hideforeword
+
+% Commands to hide or show lists of figures, tables, etc.
+\showtableofcontents
+\showlistoffigures
+\showlistoftables
+\hidenomenclature
+%###################################################THE ABOVE IS WHAT WAS WORKING
+
+
+
+
+
+
+% ^ NOTE! April 4 hack for April 15 deadline - if any of these are missing from your TOC and there should be entries there, see lines 1435-1447 of the class file for an example. You need to wrap the appropriate function call adding a call to addcontentsline
+
+
+
+
+
+ 
+
+ 
+% call an abbreviation using \ac{abbrev}
+
+% symbols and acronyms only show up when used in the text
+% \symbols{
+%     \acro{J}{Moment of Inertia}
+% }       
+
+% if you want acronym (simpler) then change these to show
+% hiding this usinbg hide instead of show removed the first emtpy list of abbreviation page, but to show the list of abbreviation you need to use showglossarieslistofabbreviations so it will be listed as part of glossariies
+
+
+\hidelistofabbreviations
+% I changed this from show to hide this and also the showglossarieslistofsymbols  to hide and that indeed hid the list of symbol page
+\hidelistofsymbols
+
+% if you want glossaries (more powerful) then leave above as hide
+% GLOSSARIES package options - automatically turns off front pages from acronym package
+
+% acronymns and symbols are basically the same, but there are two provided 
+% locations where they can show up
+
+% these three were not hidden original. I hid them (all three below)
+%\setabbreviationstyle[acronym]{long-short}
+%\setabbreviationstyle[abbreviation]{long-short}
+\makeglossaries
+
+
+
+% you can hide/show the glossaries page
+
+
+\hideglossarieslistofabbreviations
+\hideglossarieslistofsymbols
+\showglossariesglossaryofterms
+
+
+%####################################################################
+%##
+%##   You need to add all of your Glossaries one at a time.  ########
+%##
+%######################################################################
+
+ 
+
+
+
+\newglossaryentry{AI}{name=AI, description={Artificial Intelligence}}
+\newglossaryentry{ANN}{name=ANN, description={Artificial Neural Network}}
+\newglossaryentry{API}{name=API, description={Application Programming Interface}}
+
+\newglossaryentry{SHAP}{name=SHAP, description={SHapley Additive exPlanations}}
+
+\newglossaryentry{SVM}{name=SVM, description={Support Vector Machine}}
+\newglossaryentry{TN}{name=TN, description={True Negative}}
+\newglossaryentry{TP}{name=TP, description={True Positive}}
+\newglossaryentry{UBB}{name=UBB, description={User-Based Batching}}
+\newglossaryentry{UBS}{name=UBS, description={User-Based Sequencing}}
+
+
+
+\abstract{
+\lipsum[1]
+ 
+ 
+
+}

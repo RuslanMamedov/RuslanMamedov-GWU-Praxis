@@ -1,0 +1,153 @@
+\chapter{Results and Analysis}
+\section{Introduction}
+\lipsum[1]
+ 
+\section{Some Subsection}
+ 
+\lipsum[1]
+\section{Some Subsection}
+\lipsum[1]
+
+\textcolor{red}{This is how you build and format the table. The caption is centered and italized and in the top. The table number is bolded. Please remove the red coloring i use to illutrate this.}
+
+Table \ref{tab:stat_summary} presents an overview of xyz  and zkm and xyz xyz. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a,
+magna. Donec vehicula augue eu neque. Pellentesque habitant morbi
+tristique senectus et netus et malesuada fames ac turpis egestas. Mauris
+
+ 
+
+\begin{table}[H]
+\centering
+\captionsetup{
+    labelfont={bf,it}, 
+    textfont=it,  
+    justification=centering
+}
+\caption{Title of the table every first letter capitalized}
+\label{tab:stat_summary}
+\begin{tabular}{lrr}
+\toprule
+Factor1                                      & \multicolumn{1}{c}{Test 1} & \multicolumn{1}{c}{Test 2}   \\
+\midrule
+Something here    & 123         & 123    \\
+Something here    & 123          & 123   \\
+Something here    & 123          & 1123  \\
+Something here    & 16          & 123    \\
+Something here    & 123        & 123     \\
+Something here    & 123        & 123    \\
+       \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\lipsum[1]
+
+\section{Some Subsection}
+
+ 
+\lipsum[1]
+
+\textcolor{red}{This is the correct way to add and format an equation. Ensure the formatting is consistent, and remove any red coloring used for illustration.}
+
+\begin{equation}
+Accuracy = \frac {TP+TN}  {TP+TN+FP+FN}
+\end{equation}
+
+\lipsum[1].  
+
+\textcolor{red}{This is the correct way to add and format an equation. Ensure the formatting is consistent, and remove any red coloring used for illustration.}
+
+\begin{equation}
+Precision = \frac{TP}{TP+FP}
+\end{equation}
+ 
+ 
+\section{Some Subsection}
+
+\lipsum[1] 
+
+\textcolor{red}{This is the correct way to build and format a table. The caption should be centered, italicized, and placed at the top. The table number should be bolded. In this example, the table is long, so ensure the table font matches the font of your document. It is not allowed to significantly reduce the table font size just to make it fit. In this case, I used a slightly smaller font, depending on the situation—only if necessary. However, try to avoid having too many columns to maintain readability. Make sure to remove the red coloring used for illustration.}
+
+Table \ref{tab:xyz1} depicts the xxxx.
+
+
+ 
+
+
+\begin{table}[H]
+\centering
+\captionsetup{
+    labelfont={bf,it}, 
+    textfont=it, 
+    justification=centering
+}
+\caption{Test-2: Transformer vs. AutoTAB Performance Metrics}
+\label{tab:xyz1}
+%{\scriptsize % Applying smaller font size
+{\footnotesize 
+\begin{tabular}{lllllllll}
+\toprule
+\rowcolor[HTML]{E8F4FC} 
+\textbf{Model} & \textbf{\shortstack{Method}} & \textbf{A} & \textbf{P} & \textbf{R} & \textbf{F1} & \textbf{AUC} & \textbf{FNR} & \textbf{FPR} \\
+\midrule
+\multirow{3}{*}{Mod1} & Sub1    & \textbf{0.0123} & \textbf{0.0123} & \textbf{0.0123} & \textbf{0.0123} & \textbf{0.0123} & \textbf{0.0123} & \textbf{0.0123} \\
+                             & Sub2      & 0.0123          & 0.0123          & 0.0123          & 0.0123         & 0.0123          & 0.0123         & 0.0123 \\
+                             & Sub3  & 0.0123          & 0.0123         & 0.0123          & 0.0123          & 0.0123          & 0.0123          & 0.0123 \\
+\midrule
+\multirow{3}{*}{Mod2}     & Sun1   & 0.0123          & 0.0123          & 0.0123          & 0.0123          & 0.0123          & 0.0123          & 0.0123 \\
+                             & Sub2      & 0.0123          & 0.0123          & 0.0123          & 0.0123          & 0.0123         & 0.0123          & 0.0123 \\
+                             & Sub3  & 0.0123          & 0.0123          & 0.0123         & 0.0123          & 0.0123          & 0.0123          & 0.0123 \\
+\bottomrule
+\end{tabular}
+} % End of scriptsize scope
+\end{table}
+
+
+
+\subsubsection{Sub Subsection}
+
+\lipsum[1]
+
+\subsection{Subsection}
+\lipsum[1] 
+
+\section{Some Section}
+\lipsum[1] 
+
+\lipsum[1] 
+\subsection{ Conclusion}
+\lipsum[1] 
+
+\textcolor{red}{
+At the end of Chapter 3, you must restate your research questions and hypotheses exactly as they are. The format should follow the structure shown below. Please Ensure all text coloring is removed.:}\par
+RQ1:\par
+RQ2:\par
+RQ3:\par
+H1:\par
+H2:\par
+H3:\par
+
+
+ 
+
+Example:
+
+The results from this Chapter address the research questions and hypotheses outlined in Chapter 1 and repeated below:
+
+
+\textbf{RQ1:} How do Transformer encoders compare to Autoencoders in terms of accuracy, precision, and recall when detecting malicious insider threats?\par
+
+\textbf{RQ1:} You will repeat your research question1 here?\par
+
+\textbf{RQ2:} You will repeat your research question2 here?\par
+
+\textbf{RQ3:} \textbf{RQ2:} You will repeat your research question3 here?\par\par
+
+\textbf{H1:} \textbf{RQ2:} You will repeat your research Hyothesis1 here.\par
+
+\textbf{H2:} You will repeat your research Hyothesis2 here.\par
+
+\textbf{H3:} You will repeat your research Hyothesis2 here.\par
+
+
+

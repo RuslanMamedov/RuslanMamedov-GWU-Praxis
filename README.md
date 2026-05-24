@@ -1,1 +1,6 @@
-# RuslanMamedov-GWU-Praxis
+# Causal Representation Learning for Retinal Imaging  
+## Leveraging VAE Latent Space Variables for Anti-VEGF Treatment-Effect Inference
+
+### Scope of Work / Elevator Pitch
+
+Deep learning has long been known for uncovering highly complex correlative patterns. However, there is growing body of deep learning frameworks aiming to go beyond correlation by recovering causally grounded latent variables. My praxis applies this class of methods to ophthalmology, leveraging high resolution OCT scans to recover causally anchored and clinically relevant information. Specifically, I will be working with OLIVES, publicly available multimodal longitudinal dataset (96 eyes × 49 scans × multiple visits + 9408-row biomarker CSV) built from randomized control trials for a novel regimen for diabetic retinopathy treatment. Current methodologies employ either pure statistical modeling based on measured parameters or associative predictions with deep learning on raw scans. I will leverage image-based VAE-generated latent variables to facilitate causal discovery and build quantitative causal graphs which then can be used to ask clinically relevant questions across all three levels of causation - association, intervention, and counterfactuals. 

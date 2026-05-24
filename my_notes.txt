@@ -1,0 +1,61 @@
+Wording:
+Causal vs AI positioning:
+https://newsletter.wangari.global/p/causal-inference-is-finally-there
+https://spj.science.org/doi/epdf/10.34133/research.0467
+
+To read:
+
+Previous Praxis submissions:
+https://www.proquest.com/results/6287182D0038402EPQ/1?accountid=11243
+Latent space:
+Schölkopf et al. 2021 — "Towards Causal Representation Learning"
+Yang et al. 2024 — "Causal Representation Learning: A Comprehensive Survey"
+https://storage.googleapis.com/rua-uplo/files/books/12080/81ff62a3-bfba-4ce8-bd2f-d8497c6d6089.pdf
+https://link.springer.com/article/10.1007/s11633-022-1362-z
+
+
+
+RCA
+
+
+
+GWU:
+https://scholarspace.library.gwu.edu/
+
+**Key References for Hybrid Causal Semi-Supervised VAE with Anchored Latents, Residual Blocks, Causal Layers/SCMs, and Empirical Validation on Interventional Data**
+
+### Foundational CausalVAE and SCM-Integrated VAEs
+- **Yang, M., Liu, F., Chen, Z., Shen, X., Hao, J., & Wang, J. (2021). CausalVAE: Disentangled Representation Learning via Neural Structural Causal Models. CVPR.**  
+  Introduces the core CausalVAE with a Causal Layer (mask-based linear SCM) transforming independent exogenous noise into causally related endogenous latents. Supports do-operations and counterfactuals; analyzes identifiability with supervision. Directly foundational for your structured latent + causal DAG layer.
+
+- **Komanduri, A., Wu, Y., et al. (2022). SCM-VAE: Learning Identifiable Causal Representations via Structural Knowledge. IEEE Big Data.**  
+  Direct extension of CausalVAE ideas; incorporates a priori causal knowledge, structural causal prior, and non-linear additive noise SCM in latent space for improved identifiability and independent causal mechanisms. Explicit SCM on latents.
+
+### Hybrid/Anchored Causal VAEs (Closest to Your Semi-Supervised Anchored + Residual Design)
+- **Liu, E., et al. (2025). Learning Genetic Perturbation Effects with Variational Causal Models (SCCVAE / Single Cell Causal VAE). bioRxiv / PLOS Computational Biology.**  
+  Hybrid mechanistic SCM + VAE for single-cell perturbations. Integrates gene network knowledge (anchored causal structure) with variational inference; latent space for functional modules and extrapolation to unseen perturbations. Strong match for anchored known variables + residual mechanisms in perturbation data.
+
+- **Al-Ali, S., et al. (2026). Multi-Channel Causal Variational Autoencoder (MC²VAE) for Multimodal Biomedical Causal Disentanglement.**  
+  Multi-channel causal VAE for joint modality-specific latents and causal inference; relevant for imaging + other high-dim data.
+
+### Related Causal Latent Models and Counterfactual VAEs
+- **Pawlowski, N., et al. (2020). Deep Structural Causal Models for Tractable Counterfactual Inference. NeurIPS.**  
+  General framework for deep SCMs (including VAE-compatible components) enabling tractable interventions and counterfactuals.
+
+- **Fan, D., et al. (2023/2024). Causal Flows Variational Autoencoders (CauF-VAE).**  
+  VAE with causal flows for causally disentangled representations.
+
+- **Other extensions**: Works on latent SCM inference, counterfactual generative modeling with variational causal inference (e.g., Wu et al.), and disentangled causal effect VAEs (DCEVAE) for interventions/counterfactuals.
+
+### Datasets & Empirical Validation Contexts
+- **Gamella, J.L., Peters, J., & Bühlmann, P. (2024/2025). The Causal Chambers: Real Physical Systems as a Testbed for AI Methodology. arXiv / Nature Machine Intelligence.**  
+  Open hardware with designed interventions, ground-truth DAGs, image/sensor data — ideal for rigorous L2/L3 validation of your model.
+
+- **Chandrasekaran, S.N., et al. (2024). Three million images and morphological profiles... JUMP Cell Painting (CPJUMP1). Nature Methods.**  
+  Large-scale chemical/genetic perturbations with matched pairs; high-dim imaging for anchored interventions and hidden mechanism discovery.
+
+### Additional Relevant Works
+- Papers on causal representation learning in imaging (e.g., brain MRI counterfactuals, deep causality VAE for biomarkers).
+- Surveys on causal generative modeling (e.g., Akomand GitHub survey covering CausalVAE + SCM-VAE).
+
+These works provide strong precedents for your hybrid architecture (anchored supervised blocks + residual + learnable sparse causal DAG layer) and emphasize empirical validation via interventions. Your praxis can differentiate via semi-supervised anchoring on real perturbation imaging (JUMP-CP/scPerturb) + residual discovery + single-GPU feasibility, extending beyond mostly synthetic or simpler data in early papers. Prioritize CausalVAE (2021), SCM-VAE (2022), and SCCVAE (2025) as core citations.

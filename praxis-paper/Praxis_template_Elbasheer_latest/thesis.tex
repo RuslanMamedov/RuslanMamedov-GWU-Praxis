@@ -1,0 +1,182 @@
+\documentclass[thesis]{thesis-gwu}[2020/02/03]
+
+
+ 
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{adjustbox}
+\usepackage{tikz}
+\usepackage{comment}
+%This is to centalize all the table caption. added new
+\usepackage[justification=centering]{caption}
+
+
+
+
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning}
+\tikzstyle{process} = [rectangle, rounded corners, minimum width=5.5cm, minimum height=1.2cm,text centered, draw=black, fill=blue!10]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+
+
+
+
+
+
+
+ 
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+
+
+
+%added by me to disable doublespacing in appendix
+\usepackage{setspace}
+
+%to get rid of red keyword
+
+%if I want to play with the color
+% \hypersetup{
+%   colorlinks=true,
+%   linkcolor=blue, % This sets the color of internal links to blue.
+%   filecolor=magenta, % Color for URLs which open local files.
+%   urlcolor=blue, % Color for linked URLs.
+%   citecolor=blue, % Color for bibliographic citations in text.
+% }
+
+\usepackage{hyperref} \hypersetup{ colorlinks=true, linkcolor=, filecolor=magenta,
+urlcolor=blue, citecolor=blue }
+
+
+% control table better. caption etc
+
+\usepackage{caption} % For caption customization
+\captionsetup[table]{justification=justified,singlelinecheck=false} % Align captions to left
+\captionsetup[table]{font=it} % Makes table captions italic
+
+  
+
+
+% remove red box around TOC and reference
+\hypersetup{pdfborder=0 0 0}
+
+%my import added by me
+ 
+% to include source code
+\usepackage{xcolor} 
+\usepackage{listings}
+\renewcommand{\lstlistingname}{Source Code}
+\renewcommand{\lstlistlistingname}{Source Code}
+
+\usepackage{color}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstset{
+language=Python,
+backgroundcolor=\color{backcolour},
+commentstyle=\color{codegreen},
+keywordstyle=\color{magenta},
+numberstyle=\tiny\color{codegray},
+stringstyle=\color{codepurple},
+%basicstyle=\ttfamily\small,
+basicstyle=\fontsize{8}{9}\selectfont\ttfamily,
+breakatwhitespace=false,         
+breaklines=true,                 
+captionpos=b,                    
+keepspaces=true,                 
+numbers=left,                    
+numbersep=5pt,                  
+showspaces=false,                
+showstringspaces=false,
+showtabs=false,                  
+tabsize=2,
+frame=single,
+rulecolor=\color{black},
+title=\lstname
+}
+
+ 
+
+
+% by me
+\usepackage{tabularx} % Allows for tables that stretch to fit a given width
+
+%for testing beautiful tables
+
+%me for better table normal size font
+
+\usepackage{tabularx} % For tables that automatically adjust their width
+\usepackage{makecell} % Allows for line breaks within table cells
+ 
+ 
+% include pdf
+\usepackage{pdfpages}
+
+ 
+%using this to add caption to my included pdf in the appendix
+\usepackage{caption}
+ 
+ 
+
+%color table
+\usepackage{colortbl}
+
+%table multirow
+\usepackage{multirow} 
+ 
+%\usepackage{subfigure}
+\usepackage[style=apa, backend=biber]{biblatex}
+%\usepackage[style=apa,backend=biber,language=american]{biblatex}
+%\DeclareLanguageMapping{american}{american-apa}
+
+%\usepackage{natbib}
+
+
+
+%\addbibresource{thesis-bib.bib}
+\addbibresource{mybib.bib}
+
+
+\input{tex/frontmatter}
+
+% This is by me. It will add abbreviation , list of sybolsm Glossary of terms
+% I found out I don't need the next two lines as they will also print the abbrev and symbols
+% in the front of the page
+% \glsaddall
+% \printglossaries
+\glsaddallunused 
+
+%The above glsaddallunused made the glossary appear
+
+%% DOCUMENT AREA
+
+\begin{document}
+\include{chapters/chapter1}  
+\include{chapters/chapter2}  
+\include{chapters/chapter3} 
+\include{chapters/chapter4} 
+\include{chapters/chapter5} 
+%\include{tex/results-example.tex}
+
+ 
+
+\printbibliography[title=References]
+
+ 
+
+
+\include{tex/appendix-ex}
+
+% if you want to enable appendix uncomment the line below. Alsi you need to create your appendix file  in tex/appendix-ex
+
+%\appendix
+ 
+
+\end{document}
